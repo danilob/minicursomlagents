@@ -24,7 +24,7 @@ public class RollerAgent : Agent
 
 		// Move the target to a new spot
 		Target.localPosition = new Vector3(Random.value * 8 - 4,
-				                   2.0f,
+				                   0.5f,
 				                   Random.value * 8 - 4);
 	}
 
@@ -35,19 +35,19 @@ public class RollerAgent : Agent
 	    sensor.AddObservation(this.transform.localPosition);
 
 	    // Agent velocity
-	    sensor.AddObservation(rBody.velocity);
-		//sensor.AddObservation(rBody.velocity.y);
-	    //sensor.AddObservation(rBody.velocity.z);
+	    //sensor.AddObservation(rBody.velocity);
+		sensor.AddObservation(rBody.velocity.x);
+	    sensor.AddObservation(rBody.velocity.z);
 	}
 
-	public float speed = 100;
+	public float speed = 10;
 	public override void OnActionReceived(float[] vectorAction)
 	{
 	    // Actions, size = 2
 	    Vector3 controlSignal = Vector3.zero;
 	    controlSignal.x = vectorAction[0];
-	    controlSignal.y = vectorAction[1];
-		controlSignal.z = vectorAction[2];
+	    controlSignal.z = vectorAction[1];
+		//controlSignal.z = vectorAction[2];
 	    rBody.AddForce(controlSignal * speed);
 
 	    // Rewards

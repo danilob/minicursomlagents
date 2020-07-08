@@ -289,13 +289,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &873614270
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,6 @@ GameObject:
   - component: {fileID: 1425823489}
   - component: {fileID: 1425823488}
   - component: {fileID: 1425823487}
-  - component: {fileID: 1425823486}
   - component: {fileID: 1425823485}
   - component: {fileID: 1425823483}
   - component: {fileID: 1425823482}
@@ -443,7 +442,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1425823482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,19 +500,6 @@ MonoBehaviour:
   TeamId: 0
   m_UseChildSensors: 1
   m_ObservableAttributeHandling: 0
---- !u!65 &1425823486
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425823479}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &1425823487
 SphereCollider:
   m_ObjectHideFlags: 0
