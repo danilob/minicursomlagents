@@ -1,2 +1,3 @@
-model_checkpoint_path: "model-902.ckpt"
-all_model_checkpoint_paths: "model-902.ckpt"
+model_checkpoint_path: "model-500004.ckpt"
+all_model_checkpoint_paths: "model-499998.ckpt"
+all_model_checkpoint_paths: "model-500004.ckpt"
