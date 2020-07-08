@@ -21,3 +21,10 @@ mlagents-learn config/rollerball_config.yaml --run-id=<id>
 #### Para executar o treinamento via executável (considerando linux)
 
 mlagents-learn config/rollerball_config.yaml --env=GameWindow/Roller3D.x86_64 --run-id=firstTraining 
+
+#### Para compartilhar os dados de treinamento
+
+tensorboard dev upload --logdir=results --name "RollerBall" --description "Resultados"
+
+Resposta [[link](https://tensorboard.dev/experiment/JqyKZ5rDREe0zDs28P7v4w/
+)]
