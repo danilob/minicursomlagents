@@ -223,9 +223,9 @@ public class RollerAgentT2 : Agent
 	void Update() {
 	    if(textInfo!=null){
 			if(touchingGround)
-	        	textInfo.GetComponent<Text>().text = "Is on the ground\n";
+	        	textInfo.GetComponent<Text>().text = "on the ground\n";
 			else
-				textInfo.GetComponent<Text>().text = "Is in the air\n";
+				textInfo.GetComponent<Text>().text = "in the air\n";
 			
 			textInfo.GetComponent<Text>().text += "Max Speed: "+speed+"\nVelocity:   "+rBody.velocity.magnitude;
 		}	
