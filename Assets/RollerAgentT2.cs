@@ -44,13 +44,15 @@ public class RollerAgentT2 : Agent
 		    this.rBody.velocity = Vector3.zero;
 		    this.transform.localPosition = new Vector3( 0, 0.5f, 0);
 			speedRand = Random.value*(speed-30.0f) + 30.0f; //minimo 30.0f
+
+			
 		}
 
 		// Move the target to a new spot
 		Target.localPosition = new Vector3(Random.value * 8 - 4,
 				                   Random.value*2.0f + 0.5f,
 				                   Random.value * 8 - 4);
-		
+
 		
 	}
 
@@ -226,8 +228,12 @@ public class RollerAgentT2 : Agent
 	        	textInfo.GetComponent<Text>().text = "on the ground\n";
 			else
 				textInfo.GetComponent<Text>().text = "in the air\n";
-			
-			textInfo.GetComponent<Text>().text += "Max Speed: "+speed+"\nVelocity:   "+rBody.velocity.magnitude;
+			if(test==4 && randomVel){
+				textInfo.GetComponent<Text>().text += "Max Speed: "+speedRand;
+			}else{
+				textInfo.GetComponent<Text>().text += "Max Speed: "+speed;
+			}
+			textInfo.GetComponent<Text>().text += "\nVelocity:   "+rBody.velocity.magnitude;
 		}	
 		//
 		//Debug.Log("Vel: "+rBody.velocity.magnitude);
