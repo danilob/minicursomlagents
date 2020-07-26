@@ -12,7 +12,7 @@ public class RollerAgentT2 : Agent
 	Rigidbody rBody;
   public Transform Target;
 	bool touchingGround;
-	const string k_Ground = "k_Ground"; // Tag so objeto chão.
+	const string k_Ground = "k_Ground"; // Tag do objeto chão.
 	public float speed;
 
 	void Start () {
